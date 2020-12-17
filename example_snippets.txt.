@@ -1,0 +1,3 @@
+pip install -e .
+pip install git+https://github.com/phaustin/swiftascmaps
+pip install git+https://github.com/phaustin/swiftascmaps@pha
