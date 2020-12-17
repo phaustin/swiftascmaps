@@ -1,0 +1,49 @@
+{% set version = "1.1.1" %}
+
+package:
+  name: swiftascmap
+  version: {{ version }}
+
+source:
+  path: ../
+
+build:
+  number: 3
+  
+  entry_points:
+    
+  script: "{{ PYTHON }} -m pip install -vv --no-deps --ignore-installed ."
+
+requirements:
+
+  build:
+    - python=3.8
+    - matplotlib
+  
+  host:
+    - python=3.8
+    - matplotlib
+
+  run:
+    - python=3.8
+    - numpy
+    - click
+    - matplotlib
+
+test:
+  imports:
+    - swiftascmaps
+  commands:
+
+
+
+about:
+  home: https://github.com/phaustin/swiftascmaps
+  license: LICENSE.txt
+  license_family: BSD
+
+  summary: 'swift color maps'
+
+extra:
+  recipe-maintainers:
+    - phaustin

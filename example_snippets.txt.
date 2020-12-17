@@ -1,3 +1,8 @@
 pip install -e .
 pip install git+https://github.com/phaustin/swiftascmaps
 pip install git+https://github.com/phaustin/swiftascmaps@pha
+conda-lock -f environment.yml -p linux-64
+conda create --name demo --file conda-linux-64.lock
+conda activate demo
+
+
